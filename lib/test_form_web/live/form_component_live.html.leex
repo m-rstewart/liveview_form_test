@@ -1,0 +1,21 @@
+<div>
+  <%= f = form_for @changeset, "#", id: "test-form", phx_submit: "submit", phx_change: "validate", phx_target: @myself, as: :test_form %>
+    <div>
+      <%= label f, :field_one %>
+      <%= text_input f, :field_one %>
+      <%= error_tag f, :field_one %>
+    </div>
+    <div>
+      <%= label f, :field_two %>
+      <%= text_input f, :field_two %>
+      <%= error_tag f, :field_two %>
+    </div>
+    <div>
+      <%= label f, :field_three %>
+      <%= text_input f, :field_three %>
+      <%= error_tag f, :field_three %>
+    </div>
+    <button type="button" phx-click="reset_form" phx-target="<%= @myself %>">Cancel</button>
+    <button type="submit">Submit</button>
+  </form>
+</div>
